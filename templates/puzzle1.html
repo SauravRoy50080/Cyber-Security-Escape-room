@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle 1 - NFSU Escape Room</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="{{ url_for('static', filename='images/nfsu-logo.png') }}" alt="NFSU Logo" class="logo">
+            <h1>Puzzle 1: Decoding the Message</h1>
+        </div>
+        
+        <div class="content">
+            <div class="puzzle-box">
+                <h3>Forensic Analysis:</h3>
+                <p>Our team intercepted an encoded message from the hacker. Decode it to find their next target:</p>
+                
+                <div class="code-block">
+                    <pre>V2hhdCBpcyB0aGUgaGFja2VyJ3MgbmV4dCB0YXJnZXQ/</pre>
+                </div>
+                
+                <p><strong>Hint:</strong> This message is encoded using Base64. Use an online Base64 decoder or Python to decode it.</p>
+                
+                <form method="POST">
+                    <div class="form-group">
+                        <label for="answer">What is the hacker's next target?</label>
+                        <input type="text" id="answer" name="answer" class="form-control" required>
+                    </div>
+                    
+                    {% if error %}
+                    <div class="alert alert-danger">{{ error }}</div>
+                    {% endif %}
+                    
+                    <button type="submit" class="btn btn-primary">Submit Answer</button>
+                </form>
+            </div>
+            
+            <div class="progress-bar">
+                <div class="progress">
+                    <div class="progress-bar" style="width: 20%">Puzzle 1 of 5</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>National Forensic Science University Dharwad - Cybersecurity Department</p>
+        </div>
+    </div>
+</body>
+</html>
