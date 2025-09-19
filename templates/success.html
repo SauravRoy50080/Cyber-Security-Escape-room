@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mission Accomplished - NFSU Escape Room</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="{{ url_for('static', filename='images/nfsu-logo.png') }}" alt="NFSU Logo" class="logo">
+            <h1>Mission Accomplished!</h1>
+        </div>
+        
+        <div class="content">
+            <div class="success-box">
+                <div class="alert alert-success">
+                    <h2>Congratulations!</h2>
+                    <p>You have successfully identified the hacker and prevented the data breach!</p>
+                </div>
+                
+                <div class="case-summary">
+                    <h3>Case Summary:</h3>
+                    <p>Through your forensic investigation, you determined that:</p>
+                    <ul>
+                        <li>The hacker was targeting the Biometric Research Database</li>
+                        <li>The suspicious IP address was 192.168.1.100</li>
+                        <li>The hacker was using a PowerShell script to create a backdoor and exfiltrate data</li>
+                        <li>The hacker was identified as Taylor Smith</li>
+                    </ul>
+                    
+                    <p>Taylor Smith has been apprehended and the security vulnerability has been patched. NFSU Dharwad's sensitive research data is now safe!</p>
+                </div>
+                
+                <div class="certificate">
+                    <h3>Certificate of Completion</h3>
+                    <p>This certifies that you have successfully completed the NFSU Dharwad Cybersecurity Escape Room challenge.</p>
+                    <p>Date: <span id="current-date"></span></p>
+                </div>
+                
+                <div class="action-buttons">
+                    <a href="/" class="btn btn-primary">Play Again</a>
+                    <a href="#" class="btn btn-secondary">Learn More About NFSU</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>National Forensic Science University Dharwad - Cybersecurity Department</p>
+        </div>
+    </div>
+    
+    <script>
+        // Display current date
+        document.getElementById('current-date').textContent = new Date().toLocaleDateString();
+    </script>
+</body>
+</html>
