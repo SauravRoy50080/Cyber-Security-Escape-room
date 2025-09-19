@@ -1,0 +1,241 @@
+/* General Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Header Styling */
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #4a6fa5;
+    padding-bottom: 20px;
+}
+
+.logo {
+    max-height: 100px;
+    margin-bottom: 15px;
+}
+
+h1 {
+    color: #4a6fa5;
+    margin-bottom: 5px;
+}
+
+h2 {
+    color: #6c757d;
+    margin-top: 0;
+}
+
+/* Content Styling */
+.content {
+    margin-bottom: 30px;
+}
+
+.puzzle-box, .success-box {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Alert Styling */
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+/* Code and Log Blocks */
+.code-block, .log-block {
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 15px;
+    margin: 15px 0;
+    font-family: 'Courier New', Courier, monospace;
+    overflow-x: auto;
+}
+
+/* Form Styling */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+/* Button Styling */
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 10px 20px;
+    font-size: 16px;
+    line-height: 1.5;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #4a6fa5;
+    border-color: #4a6fa5;
+}
+
+.btn-primary:hover {
+    background-color: #3a5a8c;
+    border-color: #3a5a8c;
+}
+
+.btn-secondary {
+    color: #fff;
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #545b62;
+}
+
+/* Progress Bar */
+.progress-bar {
+    margin-top: 30px;
+}
+
+.progress {
+    height: 25px;
+    background-color: #e9ecef;
+    border-radius: 4px;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #4a6fa5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+}
+
+/* Suspect Profiles */
+.suspects {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.suspect {
+    flex: 1;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 0 10px;
+}
+
+.suspect:first-child {
+    margin-left: 0;
+}
+
+.suspect:last-child {
+    margin-right: 0;
+}
+
+.suspect h3 {
+    margin-top: 0;
+    color: #4a6fa5;
+}
+
+/* Certificate */
+.certificate {
+    background-color: #f8f9fa;
+    border: 2px solid #4a6fa5;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #dee2e6;
+    color: #6c757d;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .suspects {
+        flex-direction: column;
+    }
+    
+    .suspect {
+        margin: 10px 0;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}
