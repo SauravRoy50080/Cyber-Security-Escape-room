@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Escape Room - NFSU Dharwad</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="{{ url_for('static', filename='images/nfsu-logo.png') }}" alt="NFSU Logo" class="logo">
+            <h1>Cybersecurity Escape Room</h1>
+            <h2>Catch the Hacker</h2>
+        </div>
+        
+        <div class="content">
+            <div class="alert alert-danger">
+                <strong>SECURITY BREACH DETECTED!</strong>
+            </div>
+            
+            <div class="scenario">
+                <h3>Scenario:</h3>
+                <p>A hacker has breached the National Forensic Science University Dharwad network and is attempting to steal sensitive research data. As a cybersecurity forensic investigator, your mission is to trace the hacker's digital footprints and identify them before they escape with the data.</p>
+                
+                <p>You have 20 minutes to solve all the puzzles and catch the hacker!</p>
+            </div>
+            
+            <div class="instructions">
+                <h3>How to Play:</h3>
+                <ol>
+                    <li>Solve each puzzle in sequence</li>
+                    <li>Each puzzle will provide a clue to help you identify the hacker</li>
+                    <li>Enter your answer in the provided field</li>
+                    <li>Correct answers will unlock the next puzzle</li>
+                    <li>Complete all puzzles to catch the hacker!</li>
+                </ol>
+            </div>
+            
+            <div class="start-button">
+                <a href="/puzzle1" class="btn btn-primary">Start Investigation</a>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>National Forensic Science University Dharwad - Cybersecurity Department</p>
+        </div>
+    </div>
+</body>
+</html>
