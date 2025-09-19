@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle 5 - NFSU Escape Room</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="{{ url_for('static', filename='images/nfsu-logo.png') }}" alt="NFSU Logo" class="logo">
+            <h1>Puzzle 5: Identify the Hacker</h1>
+        </div>
+        
+        <div class="content">
+            <div class="puzzle-box">
+                <h3>Forensic Analysis:</h3>
+                <p>Based on your investigation, review the suspect profiles below and identify the hacker:</p>
+                
+                <div class="suspects">
+                    <div class="suspect">
+                        <h3>SUSPECT 1: Alex Johnson</h3>
+                        <ul>
+                            <li>Skills: Network administration</li>
+                            <li>Known IP: 192.168.1.50</li>
+                            <li>Favorite programming language: Python</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="suspect">
+                        <h3>SUSPECT 2: Taylor Smith</h3>
+                        <ul>
+                            <li>Skills: Malware development</li>
+                            <li>Known IP: 192.168.1.100</li>
+                            <li>Favorite programming language: PowerShell</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="suspect">
+                        <h3>SUSPECT 3: Jordan Williams</h3>
+                        <ul>
+                            <li>Skills: Web development</li>
+                            <li>Known IP: 192.168.1.75</li>
+                            <li>Favorite programming language: JavaScript</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <form method="POST">
+                    <div class="form-group">
+                        <label for="answer">Which suspect is the hacker?</label>
+                        <input type="text" id="answer" name="answer" class="form-control" placeholder="Enter full name" required>
+                    </div>
+                    
+                    {% if error %}
+                    <div class="alert alert-danger">{{ error }}</div>
+                    {% endif %}
+                    
+                    <button type="submit" class="btn btn-primary">Submit Answer</button>
+                </form>
+            </div>
+            
+            <div class="progress-bar">
+                <div class="progress">
+                    <div class="progress-bar" style="width: 100%">Final Puzzle</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>National Forensic Science University Dharwad - Cybersecurity Department</p>
+        </div>
+    </div>
+</body>
+</html>
