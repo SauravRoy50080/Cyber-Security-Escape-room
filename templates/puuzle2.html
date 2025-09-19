@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle 2 - NFSU Escape Room</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="{{ url_for('static', filename='images/nfsu-logo.png') }}" alt="NFSU Logo" class="logo">
+            <h1>Puzzle 2: Server Log Analysis</h1>
+        </div>
+        
+        <div class="content">
+            <div class="puzzle-box">
+                <h3>Forensic Analysis:</h3>
+                <p>Examine the server logs below to identify the IP address showing suspicious activity:</p>
+                
+                <div class="log-block">
+                    <pre>2023-11-15 08:23:12 - [INFO] User login: admin
+2023-11-15 08:24:45 - [INFO] User login: student1
+2023-11-15 08:25:30 - [WARNING] Failed login attempt: admin
+2023-11-15 08:26:11 - [INFO] User login: admin
+2023-11-15 08:27:05 - [SUSPICIOUS] Multiple failed logins from IP: 192.168.1.100
+2023-11-15 08:28:22 - [INFO] User login: student2
+2023-11-15 08:29:15 - [ALERT] Data access from unauthorized IP: 192.168.1.100
+2023-11-15 08:30:45 - [INFO] User logout: admin</pre>
+                </div>
+                
+                <form method="POST">
+                    <div class="form-group">
+                        <label for="answer">Which IP address is showing suspicious activity?</label>
+                        <input type="text" id="answer" name="answer" class="form-control" placeholder="e.g., 192.168.1.1" required>
+                    </div>
+                    
+                    {% if error %}
+                    <div class="alert alert-danger">{{ error }}</div>
+                    {% endif %}
+                    
+                    <button type="submit" class="btn btn-primary">Submit Answer</button>
+                </form>
+            </div>
+            
+            <div class="progress-bar">
+                <div class="progress">
+                    <div class="progress-bar" style="width: 40%">Puzzle 2 of 5</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>National Forensic Science University Dharwad - Cybersecurity Department</p>
+        </div>
+    </div>
+</body>
+</html>
