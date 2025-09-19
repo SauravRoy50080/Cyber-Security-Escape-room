@@ -24,11 +24,24 @@ body {
     margin-bottom: 30px;
     border-bottom: 2px solid #4a6fa5;
     padding-bottom: 20px;
+    position: relative;
 }
 
 .logo {
     max-height: 100px;
     margin-bottom: 15px;
+}
+
+.timer {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    color: #dc3545;
+    border: 1px solid #dc3545;
 }
 
 h1 {
@@ -122,6 +135,7 @@ label {
     line-height: 1.5;
     border-radius: 4px;
     cursor: pointer;
+    margin: 5px 0;
 }
 
 .btn-primary {
@@ -224,6 +238,19 @@ label {
     font-size: 14px;
 }
 
+/* Hint System */
+.hint-button {
+    margin: 10px 0;
+}
+
+.hint-box {
+    background-color: #e8f4fc;
+    border-left: 4px solid #4a6fa5;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .suspects {
@@ -237,5 +264,10 @@ label {
     .action-buttons {
         flex-direction: column;
         align-items: center;
+    }
+    
+    .timer {
+        position: static;
+        margin-top: 10px;
     }
 }
